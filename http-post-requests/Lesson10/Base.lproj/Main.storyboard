@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-VT-bws">
+                                <rect key="frame" x="132" y="278" width="111" height="30"/>
+                                <state key="normal" title="POST (Alamore)"/>
+                                <connections>
+                                    <action selector="alamofirePostBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fd-hy-CoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QE9-bs-5cf">
+                                <rect key="frame" x="119" y="168" width="137" height="30"/>
+                                <state key="normal" title="POST (URLSession)"/>
+                                <connections>
+                                    <action selector="urlSessionPostBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8d9-S3-fYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QE9-bs-5cf" firstAttribute="centerX" secondItem="ar8-VT-bws" secondAttribute="centerX" id="4Av-yn-He4"/>
+                            <constraint firstItem="QE9-bs-5cf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L61-OP-jeN"/>
+                            <constraint firstItem="ar8-VT-bws" firstAttribute="top" secondItem="QE9-bs-5cf" secondAttribute="bottom" constant="80" id="coE-QG-148"/>
+                            <constraint firstItem="QE9-bs-5cf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="n54-cG-s0j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="alamofirePostBtn" destination="ar8-VT-bws" id="DFM-he-b4m"/>
+                        <outlet property="urlSessionPostBtn" destination="QE9-bs-5cf" id="amY-y4-H6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
