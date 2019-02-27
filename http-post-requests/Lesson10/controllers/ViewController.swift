@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var urlSessionPostBtn: UIButton!
     @IBOutlet weak var alamofirePostBtn: UIButton!
+    @IBOutlet weak var alamofireDeleteBtn: UIButton!
     
     var urlSessionApiService = URLSessionApiService()
     
@@ -38,6 +39,9 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func alamofireDeleteBtnClicked(_ sender: Any) {
+        alamoFireApiService.delete()
+    }
     
 }
 

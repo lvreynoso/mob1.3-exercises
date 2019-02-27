@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-VT-bws">
-                                <rect key="frame" x="132" y="278" width="111" height="30"/>
-                                <state key="normal" title="POST (Alamore)"/>
+                                <rect key="frame" x="127.5" y="278" width="120" height="30"/>
+                                <state key="normal" title="POST (Alamofire)"/>
                                 <connections>
                                     <action selector="alamofirePostBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fd-hy-CoN"/>
                                 </connections>
@@ -32,10 +32,18 @@
                                     <action selector="urlSessionPostBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8d9-S3-fYL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NQ-nG-Dzx">
+                                <rect key="frame" x="120" y="355" width="135" height="30"/>
+                                <state key="normal" title="DELETE (Alamofire)"/>
+                                <connections>
+                                    <action selector="alamofireDeleteBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUq-tv-I6j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QE9-bs-5cf" firstAttribute="centerX" secondItem="ar8-VT-bws" secondAttribute="centerX" id="4Av-yn-He4"/>
+                            <constraint firstItem="2NQ-nG-Dzx" firstAttribute="top" secondItem="ar8-VT-bws" secondAttribute="bottom" constant="47" id="GJt-oz-fQ4"/>
                             <constraint firstItem="QE9-bs-5cf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L61-OP-jeN"/>
                             <constraint firstItem="ar8-VT-bws" firstAttribute="top" secondItem="QE9-bs-5cf" secondAttribute="bottom" constant="80" id="coE-QG-148"/>
                             <constraint firstItem="QE9-bs-5cf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="n54-cG-s0j"/>
@@ -43,6 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="alamofireDeleteBtn" destination="2NQ-nG-Dzx" id="Lcw-Ih-ns6"/>
                         <outlet property="alamofirePostBtn" destination="ar8-VT-bws" id="DFM-he-b4m"/>
                         <outlet property="urlSessionPostBtn" destination="QE9-bs-5cf" id="amY-y4-H6g"/>
                     </connections>
