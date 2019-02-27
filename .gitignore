@@ -1,6 +1,14 @@
 
-# Created by https://www.gitignore.io/api/macos,xcode
-# Edit at https://www.gitignore.io/?templates=macos,xcode
+# Created by https://www.gitignore.io/api/macos,xcode,cocoapods
+# Edit at https://www.gitignore.io/?templates=macos,xcode,cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
 
 ### macOS ###
 # General
@@ -56,11 +64,11 @@ DerivedData/
 !default.perspectivev3
 
 ### Xcode Patch ###
-# *.xcodeproj/*
+*.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.gitignore.io/api/macos,xcode
+# End of https://www.gitignore.io/api/macos,xcode,cocoapods
