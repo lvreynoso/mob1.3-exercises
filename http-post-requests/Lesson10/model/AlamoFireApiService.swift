@@ -72,16 +72,6 @@ class AlamoFireApiService {
                 print("DELETE Request communication error: \(String(describing: response.result.error))")
                 return
             }
-            guard let json = response.result.value as? Dictionary<String,Any> else {
-                print("No JSON result")
-                return
-            }
-            
-            print("JSON: \(json)")
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
         })
     }
     
