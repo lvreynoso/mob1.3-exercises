@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>659116686418-1gj5tj9gfrv13t36i392mqn83vmdsbbe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.659116686418-1gj5tj9gfrv13t36i392mqn83vmdsbbe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA9a6XKLB-eRmKOua8FoQ2fr6dF31w2s-c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>659116686418</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.luciareynoso.loaner</string>
+	<key>PROJECT_ID</key>
+	<string>loaner-9f335</string>
+	<key>STORAGE_BUCKET</key>
+	<string>loaner-9f335.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:659116686418:ios:654ef8f9f1978cb2</string>
+	<key>DATABASE_URL</key>
+	<string>https://loaner-9f335.firebaseio.com</string>
+</dict>
+</plist>
