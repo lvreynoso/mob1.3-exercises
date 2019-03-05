@@ -150,19 +150,25 @@ class ViewController: UIViewController {
                     let loanee = restDict["loanee"] else { return }
                 
                 let person = Loanee(name: loanee, profileImage: UIImage(named: "no profile image")!, contactNumber: "")
-                var item = Item(itemTitle: name, notes: notes, itemImage: UIImage(named: "no item image")!, loanee: person)
-                print(item.itemImage)
+                
+                // synchronously get item image!
+                // ugly but it works!
+                let imageUrl = URL(string: url)!
+                let data = try? Data(contentsOf: imageUrl)
+                let item = Item(itemTitle: name, notes: notes, itemImage: UIImage(data: data!)!, loanee: person)
+
                 // asynchronously get item image
-                DispatchQueue.global(qos: .userInteractive).async {
-                    print("getting the image data for \(item.itemTitle)")
-                    let data = try? Data(contentsOf: URL(string: url)!)
-                    DispatchQueue.main.async {
-                        print("updating the image for \(item.itemTitle)")
-                        let debugImage = UIImage(data: data!) ?? UIImage(named: "no item image")!
-                        print(debugImage)
-                        item.itemImage = UIImage(data: data!) ?? UIImage(named: "no item image")!
-                    }
-                }
+//                DispatchQueue.global(qos: .userInteractive).async {
+//                    print("getting the image data for \(item.itemTitle)")
+//                    let data = try? Data(contentsOf: URL(string: url)!)
+//                    DispatchQueue.main.async {
+//                        print("updating the image for \(item.itemTitle)")
+//                        let debugImage = UIImage(data: data!) ?? UIImage(named: "no item image")!
+//                        print(debugImage)
+//                        item.itemImage = UIImage(data: data!) ?? UIImage(named: "no item image")!
+//                    }
+//                }
+                
                 self.items.append(item)
             }
             self.collectionView.reloadData()
